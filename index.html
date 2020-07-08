@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Demo phase </title>
+        <script src="lib/system.js" type="text/javascript"></script>
+        <script src="lib/phaser.min.js" type="text/javascript"></script>
+        <script src="js/boot.js" type="text/javascript"></script>
+        <script src="js/preload.js" type="text/javascript"></script>
+        <script src="js/play.js" type="text/javascript"></script>
+        <script src="js/prefeb.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            var game = new Phaser.Game(810, 660);
+            game.state.add('boot', MyGame.boot);
+            game.state.add('preload', MyGame.preload);
+            game.state.add('playGame', MyGame.playGame);
+            game.state.start('boot');
+
+        </script>
+        <div id="game"> </div>
+
+
+    </body>
+</html>
